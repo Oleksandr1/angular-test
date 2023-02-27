@@ -6,6 +6,7 @@ import { ItemTableComponent } from './item-table/item-table.component';
 import { ItemTableRowComponent } from './item-table-row/item-table-row.component';
 import { ItemTableRowChildComponent } from './item-table-row-child/item-table-row-child.component';
 import { ItemTopMenuComponent } from './item-top-menu/item-top-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ItemTopMenuComponent } from './item-top-menu/item-top-menu.component';
     ItemTopMenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
