@@ -1,1 +1,61 @@
-<p>item-top-menu works!</p>
+<div class="top-menu">
+  <div class="top-menu--items">
+    <div>
+      <label><b>Timer, ms</b></label>
+      <input
+        type="number"
+        id="timer"
+        name="timer"
+        [formControl]="timer"
+        (change)="changeConfiguration()"
+      />
+    </div>
+    <div
+      *ngIf="timer.invalid && (timer.dirty || timer.touched)"
+      class="top-menu--alert"
+    >
+      <div *ngIf="timer.errors?.['required']">Timer is required.</div>
+      <div *ngIf="timer.errors?.['min']">Timer can't be negatives</div>
+    </div>
+  </div>
+  <div class="top-menu--items">
+    <div>
+      <label><b>Array size</b></label>
+      <input
+        type="number"
+        id="arrSize"
+        name="arrSize"
+        [formControl]="arrSize"
+        (change)="changeConfiguration()"
+      />
+    </div>
+    <div
+      *ngIf="arrSize.invalid && (arrSize.dirty || arrSize.touched)"
+      class="top-menu--alert"
+    >
+      <div *ngIf="arrSize.errors?.['required']">Timer is required.</div>
+      <div *ngIf="arrSize.errors?.['min']">Timer can't be negatives</div>
+    </div>
+  </div>
+  <div class="top-menu--items">
+    <div>
+      <label><b>Additional array ids</b></label>
+      <input
+        type="text"
+        id="additionalArr"
+        name="additionalArr"
+        [formControl]="search"
+        (change)="changeFilter()"
+      />
+    </div>
+    <div
+      *ngIf="search.invalid && (search.dirty || search.touched)"
+      class="top-menu--alert"
+    >
+      <div *ngIf="search.errors?.['pattern']">
+        write numeric IDs with a comma
+      </div>
+    </div>
+  </div>
+  <button class="top-menu--stop-btn" (click)="stopFrequency()">Stop</button>
+</div>

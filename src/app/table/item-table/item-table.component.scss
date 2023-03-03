@@ -1,0 +1,15 @@
+.table {
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__header {
+    background-color: lightgray;
+    padding: 10px 50px;
+    font-weight: 800;
+    font-size: 18px;
+  }
+}

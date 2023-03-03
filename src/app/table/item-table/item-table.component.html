@@ -1,0 +1,14 @@
+<div class="table__wrapper">
+  <table>
+    <thead class="table">
+      <td class="table__header" *ngFor="let key of tableHeader">{{ key }}</td>
+    </thead>
+    <tbody>
+      <tr
+        app-item-table-row
+        *ngFor="let item of items | slice : -10"
+        [item]="item"
+      ></tr>
+    </tbody>
+  </table>
+</div>

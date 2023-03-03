@@ -1,0 +1,7 @@
+<td>{{ item.id }}</td>
+<td>{{ item.int }}</td>
+<td>{{ item.float }}</td>
+<td [style]="{ 'background-color': item.color }">{{ item.color }}</td>
+<td>
+  <app-item-table-row-child [item]="item.child"></app-item-table-row-child>
+</td>

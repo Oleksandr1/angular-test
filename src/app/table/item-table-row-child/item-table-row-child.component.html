@@ -1,0 +1,14 @@
+<div class="item-child">
+  <table>
+    <thead>
+      <td><b>id</b></td>
+      <td><b>color</b></td>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ item.id }}</td>
+        <td [style]="{ 'background-color': item.color }">{{ item.color }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
