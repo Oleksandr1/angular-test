@@ -27,7 +27,6 @@ export class ItemTableComponent implements OnInit, OnDestroy {
         this.items.push(i);
       },
     });
-
     this._isSearchResult = this.itemService.isSearchResult().subscribe({
       next: (i) => {
         if (i) {
